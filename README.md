@@ -4,9 +4,9 @@ A Node.js client for [adventure.land](https://adventure.land/ "Adventure Land")
 
 ## Recent Versions
 
-#### 2024-07-12
+#### 2026-01-23
 
-Fixed missing typeScript bindings for caracAL added types
+Fixed ENOENT error for nonexistent TYPECODE.out file
 
 ### Typescript
 
