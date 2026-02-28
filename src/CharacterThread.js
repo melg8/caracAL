@@ -71,7 +71,12 @@ async function make_runner(upper, CODE_file, version, is_typescript) {
   //TODO in the future i should consider parsing the relevant parts out of the html files directly
   //for the runners as well as the instances
   vm.runInContext(
-    "var active=false,catch_errors=true,is_code=1,is_server=0,is_game=0,is_bot=parent.is_bot,is_cli=parent.is_cli,is_sdk=parent.is_sdk;",
+    `
+    var active=false,catch_errors=true,is_code=1,is_server=0,is_game=0,is_bot=parent.is_bot,is_cli=parent.is_cli,is_sdk=parent.is_sdk;
+    var Place='game';
+    var transporting=false;var Dev=''; 
+    var Local='';
+    `,
     runner_context,
   );
   await ev_files(runner_sources, runner_context);
