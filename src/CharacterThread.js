@@ -157,10 +157,12 @@ async function make_game(proc_args) {
   game_context.io = io;
   game_context.bowser = {};
   await ev_files(game_sources, game_context);
+  game_context.VERSION = "" + game_context.G.version;
+  game_context.Local = "";
+  game_context.Dev = "";
+  game_context.Place = "code";
   game_context.server_address = "wss://" + proc_args.realm_address;
   game_context.server_path = proc_args.realm_path;
-  game_context.VERSION = "" + game_context.G.version;
-  game_context.server_addr = proc_args.realm_addr;
   game_context.server_port = proc_args.realm_port;
   game_context.user_id = proc_args.sess.split("-")[0];
   game_context.user_auth = proc_args.sess.split("-")[1];
