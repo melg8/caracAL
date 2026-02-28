@@ -106,9 +106,6 @@ async function make_runner(upper, CODE_file, version, is_typescript) {
         console.log("terminating self");
         vm.runInContext("on_destroy()", runner_context);
         process.exit();
-        //vscode says this is unreachable.
-        //with how whack node is better be safe
-        break;
     }
   });
 
@@ -160,6 +157,8 @@ async function make_game(proc_args) {
   game_context.io = io;
   game_context.bowser = {};
   await ev_files(game_sources, game_context);
+  game_context.server_address = "wss://" + proc_args.realm_address;
+  game_context.server_path = proc_args.realm_path;
   game_context.VERSION = "" + game_context.G.version;
   game_context.server_addr = proc_args.realm_addr;
   game_context.server_port = proc_args.realm_port;
