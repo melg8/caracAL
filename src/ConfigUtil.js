@@ -36,7 +36,7 @@ async function make_auth(email, password) {
     cookies.find((x) => (match = /auth=([^;]+)/.exec(x)));
 
     if (!match) {
-      throw new Error("auth_staging cookie not found");
+      throw new Error("auth cookie not found");
     }
 
     return match[1];
