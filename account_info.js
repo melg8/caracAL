@@ -7,7 +7,7 @@ class Info {
   async updateInfo() {
     console.log("updating account info");
     const raw = await fetch(
-      "https://adventure.land/api/servers_and_characters",
+      "http://localhost:8090/api/servers_and_characters",
       {
         method: "POST",
         headers: {

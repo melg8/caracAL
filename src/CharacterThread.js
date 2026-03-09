@@ -26,7 +26,7 @@ const html_spoof = `<!DOCTYPE html>
 </html>`;
 
 function make_context(upper = null) {
-  const result = new JSDOM(html_spoof, { url: "https://adventure.land/" })
+  const result = new JSDOM(html_spoof, { url: "http://localhost:8090/" })
     .window;
   //jsdom maked globalThis point to Node global
   //but we want it to be window instead
@@ -187,7 +187,7 @@ async function make_game(proc_args) {
   game_context.Local = "";
   game_context.Dev = "";
   game_context.Place = "code";
-  game_context.server_address = "wss://" + proc_args.realm_address;
+  game_context.server_address = "ws://" + proc_args.realm_address;
   game_context.server_path = proc_args.realm_path;
   game_context.server_port = proc_args.realm_port;
   game_context.user_id = proc_args.sess.split("-")[0];

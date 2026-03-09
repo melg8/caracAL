@@ -7,7 +7,7 @@ const fs = require("fs").promises;
 const { constants } = require("fs");
 
 async function make_auth(email, password) {
-  const raw = await fetch("https://adventure.land/api/signup_or_login", {
+  const raw = await fetch("http://localhost:8090/api/signup_or_login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

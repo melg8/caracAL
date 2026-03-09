@@ -1,7 +1,7 @@
 var inside = "login";
 var user_id = "",
   user_auth = "";
-var base_url = "https://adventure.land";
+var base_url = "http://localhost:8090";
 var server_addr = "",
   server_port = "";
 var server_names = { US: "Americas", EU: "Europas", ASIA: "Eastlands" };
@@ -62,7 +62,7 @@ X.servers = [
     players: 10,
     key: "EUI",
     port: 2053,
-    addr: "eu1.adventure.land",
+    addr: "localhost",
   },
   {
     name: "II",
@@ -70,7 +70,7 @@ X.servers = [
     players: 23,
     key: "EUII",
     port: 2083,
-    addr: "eu2.adventure.land",
+    addr: "localhost",
   },
   {
     name: "PVP",
@@ -78,7 +78,7 @@ X.servers = [
     players: 3,
     key: "EUPVP",
     port: 2087,
-    addr: "eupvp.adventure.land",
+    addr: "localhost",
   },
   {
     name: "I",
@@ -86,7 +86,7 @@ X.servers = [
     players: 18,
     key: "USI",
     port: 2053,
-    addr: "us1.adventure.land",
+    addr: "localhost",
   },
   {
     name: "II",
@@ -94,7 +94,7 @@ X.servers = [
     players: 10,
     key: "USII",
     port: 2083,
-    addr: "us2.adventure.land",
+    addr: "localhost",
   },
   {
     name: "III",
@@ -102,7 +102,7 @@ X.servers = [
     players: 51,
     key: "USIII",
     port: 2053,
-    addr: "us3.adventure.land",
+    addr: "localhost",
   },
   {
     name: "PVP",
@@ -110,7 +110,7 @@ X.servers = [
     players: 14,
     key: "USPVP",
     port: 2087,
-    addr: "uspvp.adventure.land",
+    addr: "localhost",
   },
   {
     name: "I",
@@ -118,7 +118,7 @@ X.servers = [
     players: 12,
     key: "ASIAI",
     port: 2053,
-    addr: "asia1.adventure.land",
+    addr: "localhost",
   },
 ];
 X.characters = [];
